@@ -2,11 +2,12 @@ require 'yaml'
 require 'twitter'
 
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key        = "K4fckJLvqUkNsJNYV0hXAnZtf"
-  config.consumer_secret     = "t2rK6AptmZM8nz2JeXSuZo9elfXH8hDZOHXPGZGLBazhwEXmCD"
-  config.access_token        = "2264919367-1poBrMxyYRTciNlCeLWPUj6rWxnWWbJHigXVjdp"
-  config.access_token_secret = "JA7QOQXh1K0d4BUZXhGpeNDumTLhqgobPFgla7uZZttJW"
+  config.consumer_key        = ENV["KORBOTT_KEY"]
+  config.consumer_secret     = ENV["KORBOTT_SECRET"]
+  config.access_token        = ENV["KORBOTT_TOKEN"]
+  config.access_token_secret = ENV["KORBOTT_TOKEN_SECRET"]
 end
+
 
 primes = [2,3]
 number = 3
